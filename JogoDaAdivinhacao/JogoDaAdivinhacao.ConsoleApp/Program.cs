@@ -13,15 +13,15 @@ namespace JogoDeAdivinhacao.ConsoleApp
             {
                 string dificuldade = ExibirMenu();
 
-                if (Adivinhacao.FacilEscolhida(dificuldade))
+                if (JogoAdivinhacao.FacilEscolhida(dificuldade))
                 {
                     FacilExibir();
                 }
-                else if (Adivinhacao.MedioEscolhida(dificuldade))
+                else if (JogoAdivinhacao.MedioEscolhida(dificuldade))
                 {
                     MedioExibir();
                 }
-                else if (Adivinhacao.DificilEscolhida(dificuldade))
+                else if (JogoAdivinhacao.DificilEscolhida(dificuldade))
                 {
                     DificilExibir();
                 }
@@ -32,7 +32,7 @@ namespace JogoDeAdivinhacao.ConsoleApp
                 }
 
                 //geração do numero secreto
-                int numeroSecreto = Adivinhacao.GeradorNumero();
+                int numeroSecreto = JogoAdivinhacao.GeradorNumero();
 
                 //loop tentativa
                 for (int tentativas = 1; tentativas <= totalDeTentativas; tentativas++)

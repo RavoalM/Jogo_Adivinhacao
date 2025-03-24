@@ -1,6 +1,6 @@
 ﻿namespace JogoDaAdivinhacao.ConsoleApp
 {
-    class Adivinhacao
+    class JogoAdivinhacao
     {
         public static bool FacilEscolhida(string dificuldade)
         {
