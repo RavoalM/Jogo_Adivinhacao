@@ -11,7 +11,7 @@ namespace JogoDeAdivinhacao.ConsoleApp
         {
             while (true)
             {
-                string dificuldade = ExibirMenu();
+                string dificuldade = MenuExibir();
 
                 if (JogoAdivinhacao.FacilEscolhida(dificuldade))
                 {
@@ -75,7 +75,7 @@ namespace JogoDeAdivinhacao.ConsoleApp
 
 
         }
-        public static string ExibirMenu()
+        public static string MenuExibir()
         {
             Console.Clear();
             Console.WriteLine("Jogo de Adivinhação");
