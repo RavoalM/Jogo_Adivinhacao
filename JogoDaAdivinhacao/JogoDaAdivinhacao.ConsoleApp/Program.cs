@@ -37,7 +37,7 @@ namespace JogoDeAdivinhacao.ConsoleApp
                 //loop tentativa
                 for (int tentativas = 1; tentativas <= totalDeTentativas; tentativas++)
                 {
-                    int numeroDigitado = Gameplay(tentativas);
+                    int numeroDigitado = ComeçarJogo(tentativas);
 
                     if (numeroDigitado == numeroSecreto)
                     {
@@ -53,12 +53,12 @@ namespace JogoDeAdivinhacao.ConsoleApp
 
                     else if (numeroDigitado > numeroSecreto)
                     {
-                        NaltoExibir();
+                        NumeroAlto();
                     }
 
                     else if (numeroDigitado < numeroSecreto)
                     {
-                        NbaixoExibir();
+                        NumeroBaixo();
                     }
 
                     Console.WriteLine("Aperte ENTER para continuar");
@@ -66,7 +66,7 @@ namespace JogoDeAdivinhacao.ConsoleApp
 
                 }
 
-                string opcaoContinuar = mensagemFinal();
+                string opcaoContinuar = MensagemFinalExibir();
 
                 if (opcaoContinuar != "S")
                     break;
@@ -115,7 +115,7 @@ namespace JogoDeAdivinhacao.ConsoleApp
             Console.WriteLine("Aperte ENTER para continuar");
             Console.ReadLine();
         }
-        public static int Gameplay(int tentativas)
+        public static int ComeçarJogo(int tentativas)
         {
             Console.Clear();
             Console.WriteLine("==========================");
@@ -143,21 +143,21 @@ namespace JogoDeAdivinhacao.ConsoleApp
             Console.WriteLine("==========================");
 
         }
-        public static void NaltoExibir()
+        public static void NumeroAlto()
         {
             Console.WriteLine("\n==========================");
             Console.WriteLine("Ta indo muito alto em!!!");
             Console.WriteLine("==========================");
 
         }
-        public static void NbaixoExibir()
+        public static void NumeroBaixo()
         {
             Console.WriteLine("\n==========================");
             Console.WriteLine("Ta indo muito baixo em!!!");
             Console.WriteLine("==========================");
 
         }
-        public static string mensagemFinal()
+        public static string MensagemFinalExibir()
         {
             Console.WriteLine("Deseja continuar? (S/N)");
             string opcaoContinuar = Console.ReadLine().ToUpper();

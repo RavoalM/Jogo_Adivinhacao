@@ -18,7 +18,7 @@
         }
         public static bool DificilEscolhida(string dificuldade)
         {
-            bool FacilEscolhida = dificuldade == "2";
+            bool FacilEscolhida = dificuldade == "3";
 
             return FacilEscolhida;
 
